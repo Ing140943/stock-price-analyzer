@@ -48,3 +48,32 @@ sequenceDiagram
 ```python -m venv .venv
 source .venv/bin/activate  # หรือ .venv\\Scripts\\activate สำหรับ Windows
 pip install -r requirements.txt
+```
+## How to run
+
+```
+# 1. Clone the repository
+git clone https://github.com/your-username/stock-price-analyzer.git
+cd stock-price-analyzer
+
+# 2. Create virtual environment
+python -m venv .venv
+source .venv/bin/activate  # For Windows: .venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the app
+streamlit run app.py
+```
+
+| Question                       | Answer                                                                 |
+| ------------------------------ | ---------------------------------------------------------------------- |
+| What does this app do?         | Analyzes stock price trends using historical data                      |
+| What data does it use?         | Closing prices of stocks from Yahoo Finance (`yfinance`)               |
+| What model is used?            | Linear Regression                                                      |
+| How does it process data?      | Converts dates to numeric values, trains the model, predicts prices    |
+| What technologies are used?    | Python, yfinance, scikit-learn, matplotlib, Streamlit                  |
+| What are the limitations?      | Linear regression assumes linearity → not suitable for volatile stocks |
+| How do users interact with it? | Enter a stock symbol → get historical chart + future predictions       |
+| How could it be improved?      | Add LSTM model, news sentiment analysis, or other market features      |
